@@ -1,0 +1,8 @@
+name: MandoMC
+version: '${project.version}'
+main: mmcwarps2.mandomc.MandoMC
+api-version: 1.19
+load: STARTUP
+authors: [ AstuteFlamez ]
+description: Warp plugin #2 bc #1 broke
+website: shop.mandomc.net
