@@ -27,6 +27,7 @@ public class Warp implements CommandExecutor {
             warps.setItem(24, ISC.createItem(Material.WARPED_HYPHAE, ChatColor.BLUE + "" + ChatColor.BOLD + "Umbara"));
             warps.setItem(31, ISC.createItem(Material.GREEN_CONCRETE_POWDER, ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Alderaan"));
             warps.setItem(38, ISC.createItem(Material.SNOW_BLOCK, ChatColor.WHITE + "" + ChatColor.BOLD + "Hoth"));
+            warps.setItem(42, ISC.createItem(Material.MUD_BRICKS, ChatColor.GOLD + "" + ChatColor.BOLD + "Concordia"));
             warps.setItem(43, ISC.createItem(Material.SANDSTONE, ChatColor.GOLD + "" + ChatColor.BOLD + "Tatooine"));
             warps.setItem(50, ISC.createItem(Material.MAGMA_BLOCK, ChatColor.DARK_RED + "" + ChatColor.BOLD + "Mustafar"));
             warps.setItem(52, ISC.createItem(Material.SMOOTH_RED_SANDSTONE, ChatColor.GOLD + "" + ChatColor.BOLD + "Geonosis"));
@@ -73,9 +74,17 @@ public class Warp implements CommandExecutor {
                     player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWARPS" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to the " + ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Market" + ChatColor.GRAY + "!");
                     player.teleport(blackMarket);
                 }else if(args[0].equalsIgnoreCase("jabba")){
-                    Location jabba = new Location(Bukkit.getWorld("BuildWorld"),-77, -41, 102, 38.9057f, 4.445789f);
+                    Location jabba = new Location(Bukkit.getWorld("JabbasPalace"),-122, -50, 142, 180f, 0f);
                     player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWARPS" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Jabba's Palace" + ChatColor.GRAY + "!");
                     player.teleport(jabba);
+                }else if(args[0].equalsIgnoreCase("mines")){
+                    Location mines = new Location(Bukkit.getWorld("Concordia"),15424, 44, -2061, 83.05f, -3.2f);
+                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWARPS" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to the " + ChatColor.AQUA + "" + ChatColor.BOLD + "Concordian Mines" + ChatColor.GRAY + "!");
+                    player.teleport(mines);
+                }else if(args[0].equalsIgnoreCase("arena")){
+                    Location arena = new Location(Bukkit.getWorld("Concordia"),16093, 34, -3176, 151.46f, -2.23f);
+                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWARPS" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to the " + ChatColor.BLUE + "" + ChatColor.BOLD + "Death Watch Arena" + ChatColor.GRAY + "!");
+                    player.teleport(arena);
                 }else{
                     player.openInventory(warps);
                 }

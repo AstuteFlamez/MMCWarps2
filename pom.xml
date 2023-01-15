@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>MMCWarps2</groupId>
-    <artifactId>MandoMC</artifactId>
+    <artifactId>MMCWarps</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 

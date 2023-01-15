@@ -3,9 +3,14 @@ package mmcwarps2.mandomc;
 import mmcwarps2.mandomc.commands.Warp;
 import mmcwarps2.mandomc.listeners.InventoryClick;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class MandoMC extends JavaPlugin {
+import java.util.HashMap;
+
+public final class MMCWarps extends JavaPlugin {
+
+    public static HashMap<Player, Boolean> isPlayerTeleporting = new HashMap<>();
 
     @Override
     public void onEnable() {
@@ -19,5 +24,9 @@ public final class MandoMC extends JavaPlugin {
     @Override
     public void onDisable() {
         getServer().getConsoleSender().sendMessage(ChatColor.RED + "[MMCWarps]: Plugin is disabled!");
+    }
+
+    public static JavaPlugin getPlugin(){
+        return getPlugin();
     }
 }
