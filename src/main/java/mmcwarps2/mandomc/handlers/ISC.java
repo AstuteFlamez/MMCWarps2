@@ -8,18 +8,6 @@ import java.util.ArrayList;
 
 public class ISC {
 
-    public static ItemStack createItem(Material material, String displayName, String newLore){ //no customModelData
-        ItemStack i = new ItemStack(material);
-
-        ItemMeta meta = i.getItemMeta();
-        meta.setDisplayName(displayName);
-        ArrayList<String> lore = new ArrayList<String>();
-        lore.add(newLore);
-        meta.setLore(lore);
-
-        return i;
-    }
-
     public static ItemStack createItem(Material material){ //just a minecraft item
         ItemStack i = new ItemStack(material);
 
@@ -203,6 +191,19 @@ public class ISC {
         lore.add(l8);
         lore.add(l9);
         meta.setCustomModelData(customModelData);
+        meta.setLore(lore);
+        i.setItemMeta(meta);
+
+        return i;
+    }
+
+    public static ItemStack createItem(Material material, String displayName, String l1){
+        ItemStack i = new ItemStack(material);
+
+        ItemMeta meta = i.getItemMeta();
+        meta.setDisplayName(displayName);
+        ArrayList<String> lore = new ArrayList<String>();
+        lore.add(l1);
         meta.setLore(lore);
         i.setItemMeta(meta);
 

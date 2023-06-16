@@ -1,5 +1,6 @@
 package mmcwarps2.mandomc;
 
+import mmcwarps2.mandomc.commands.Spawn;
 import mmcwarps2.mandomc.commands.Warp;
 import mmcwarps2.mandomc.listeners.InventoryClick;
 import org.bukkit.ChatColor;
@@ -15,6 +16,7 @@ public final class MMCWarps extends JavaPlugin {
     @Override
     public void onEnable() {
         getCommand("warp").setExecutor(new Warp());
+        getCommand("spawn").setExecutor(new Spawn());
 
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
 

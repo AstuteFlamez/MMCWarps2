@@ -8,4 +8,5 @@ description: Warp plugin
 website: shop.mandomc.net
 commands:
   warp:
+  spawn:
 
